@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	float z, m, k, s, i;
+	float z, m, k, s, i;//注意要用float
 	float sum = 0;
 	m = 1;
 	z = 2;
@@ -9,9 +9,9 @@ int main()
 	{
 		s = z / m;
 		sum += s;
-		k = z;
-		z = m + z;
-		m = k;
+		k = z;//先将分子的值赋给k
+		z = m + z;//再赋给分子新的值
+		m = k;//最后分母等于之前分子的值
 		
 		
 	}
