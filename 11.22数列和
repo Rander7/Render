@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+	float z, m, k, s, i;
+	float sum = 0;
+	m = 1;
+	z = 2;
+	for (i = 1; i <= 20; i++)
+	{
+		s = z / m;
+		sum += s;
+		k = z;
+		z = m + z;
+		m = k;
+		
+		
+	}
+	printf("%f", sum);
+	return 0;
+}
