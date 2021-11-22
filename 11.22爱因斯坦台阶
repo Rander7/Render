@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+	int s = 7;
+	while (!(s%3==2&&s%5==4&&s%6==5))//注意这里while用法
+	{
+		s += 14;
+	}
+		printf("%d", s);
+	
+	
+		
+	
+	return 0;
+
+
+
+
+}
