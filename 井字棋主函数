@@ -1,0 +1,80 @@
+#include<stdio.h>
+#include"game.h"
+void meau()
+{
+	printf("***************************\n");
+	printf("********   1.play   *******\n");
+	printf("********   0.exit   *******\n");
+	printf("***************************\n");
+}
+void game()
+{
+	char board[ROW][COL];
+	InitBoard(board,ROW,COL);//声明初始化棋盘函数
+	PrintBoard(board, ROW, COL);//声明打印棋盘函数
+	char ret = 0;
+	while (1)//下棋是反复循环的
+	{
+		Playerturn(board, ROW, COL);//玩家走棋
+		PrintBoard(board, ROW, COL);//走一次打印一次棋盘
+		ret=IsWin(board, ROW, COL);//走一次判断是否赢
+		if (ret != 'C')//如果不是C说明要么赢要么平局，则跳出下棋循环
+		
+			break;
+		
+		
+		Computerturn(board, ROW, COL); //电脑走棋
+		PrintBoard(board, ROW, COL);
+		ret=IsWin(board, ROW, COL);
+		if (ret != 'C')
+		
+			break;
+		
+	}
+	if (ret == '*')//跳出while循环后判断返回值，以此确定输赢
+	{
+		printf("玩家赢了\n");
+	}
+	else if (ret == '#')
+	{
+		printf("电脑赢了\n");
+	}
+	else
+	{
+		printf("平局\n");
+	}
+	PrintBoard(board, ROW, COL);
+
+	
+
+
+}
+int main()
+
+
+
+{
+	int input = 0;
+	srand((unsigned int)time(NULL));//每次开始时候随机取一个，注意unsigned int型式
+	                                //注意要引头文件
+	
+	do
+	{
+		meau();//print the meau
+		printf("Play or Not?\n");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			printf("game start!\n");
+			game();
+			break;
+		case 0:
+			printf("exit!\n");
+			break;
+		default:
+			printf("Please input again!\n");
+		}
+	} while (input);//if input other positive number,start circulation
+	return 0;
+}
