@@ -1,0 +1,25 @@
+#pragma once
+#define ROW 3
+#define COL 3
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+
+void InitBoard(char board[ROW][COL], int row, int col);
+void DisplayBoard(char board[ROW][COL], int row, int col);
+void Playerturn(char board[ROW][COL], int row, int col);
+void Computerturn(char board[ROW][COL], int row, int col);
+char IsWin(char board[ROW][COL], int row, int col);
+int IsFull(char board[ROW][COL], int row, int col);
+#define ROW 3//注意无分号
+#define COL 3
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+void InitBoard(char board[ROW][COL], int row, int col);//注意分号
+void PrintBoard(char board[ROW][COL], int row, int col);
+void Playerturn(char board[ROW][COL], int row, int col);
+void Computerturn(char board[ROW][COL], int row, int col);
+char IsWin(char board[ROW][COL], int row, int col);
+int IsFull(char board[ROW][COL], int row, int col);
