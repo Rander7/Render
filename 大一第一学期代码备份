@@ -1,0 +1,3173 @@
+#include<stdio.h>
+int main()
+{
+	int i, j, n, s1;
+	scanf("%d", &n);
+	s1 = 0;
+
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 1; j <= i; j++)
+		{
+			s1 += j;
+		}
+
+
+	}
+	//#include<stdio.h>
+int main()
+{
+	int i, j, n, s1;
+	scanf("%d", &n);
+	s1 = 0;
+
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 1; j <= i; j++)
+		{
+			s1 += j;
+		}
+
+
+	}
+	
+	printf("%d", s1);
+	return 0;
+}
+
+
+#include<stdio.h>
+int main()
+{
+	float z, m, k, s, i;//这里z，m都要用float
+	float sum = 0;
+	m = 1;
+	z = 2;
+	for (i = 1; i <= 20; i++)
+	{
+		s = z / m;
+		sum += s;
+		k = z;
+		z = m + z;
+		m = k;
+
+
+	}
+	printf("%f", sum);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int a = 0, b = 0, c = 0;
+		float sum = 0;
+	
+	for (a = 0; a < 9; a++)
+	{
+		for (b = 0; b < 12; b++)
+		{
+			c = 36 - a - b;
+			sum = 4 * a + 3 * b + c / 2.0;
+			if (sum == 36)
+				printf("%d\n%d\n%d\n", a, b, c);
+		}
+	}
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int s = 7;
+	while (!(s%3==2&&s%5==4&&s%6==5))
+	{
+		s += 14;
+	}
+		printf("%d", s);
+
+	return 0;
+
+}
+
+
+#include<stdio.h>
+int main()
+{
+	float h, w, BMI;
+	
+	scanf("%f%f", &h, &w);
+	BMI = w / (h * h);
+	if (BMI < 18.5)
+		printf("过轻");
+	if (BMI >= 18.5 && BMI < 23.9)
+		printf("正常");
+	if (BMI >= 24 && BMI < 27.9)
+		printf("过重");
+	if (BMI >= 28 && BMI < 32)
+		printf("肥胖");
+	if (BMI >= 32)
+		printf("过于肥胖");
+					printf("%f", BMI);
+					
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int sum = 0, i = 0;
+	for (i = 1; sum < 300; i++)
+	{
+		sum += i;
+	}
+	i = i - 1;//注意减一
+	printf("%d\n%d\n", i, sum);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int i, j, n, sum = 0;
+
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 0; j <= i; j++)
+		{
+			sum += j;
+		}
+	}
+	printf("%d", sum);
+	return 0;
+
+
+
+
+
+}
+
+#include<stdio.h>
+int main()
+{
+	int n;
+	float fz=2, fm=1, k=0, fs, sum = 0;
+	for (n = 1; n <= 20; n++)
+	{
+		fs = fz / fm;//这里一定要先写出分数等于什么，再写分子分母怎么变化
+		sum += fs;
+		k = fz;
+		fz = fz + fm;
+		fm = k;
+	}
+	printf("%f", sum);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int man, woman, child;
+	float sum;//记住sum要用float，看170行
+
+	for (man = 0; man < 9; man++)//双循环多个数据都要累加就for套for
+	{
+		for (woman = 0; woman < 12; woman++)
+		{
+			child = 36 - man - woman;
+			sum = 4 * man + 3 * woman + child / 2.0;
+			if (sum==36)
+				printf("%d\n%d\n%d\n", man, woman, child);
+		}
+	}
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int s=7;
+	int k = 0;
+	while (!(k))
+	{
+		if (s % 2 == 1 && s % 3 == 2 && s % 5 == 4 && s % 6 == 5 && s % 7 == 0)
+		{
+			k = 1;
+			printf("%d", s);
+		}
+		s++;
+	}
+	return 0;
+
+}
+
+
+#include<stdio.h>
+int main()
+{
+	int year = 0;
+	printf("input a year\n");
+	scanf("%d",& year);
+	if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+		printf("it is a leap year\n");
+	else
+		printf("it is not a leap year\n");
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int grade;
+	int k;
+	scanf("%d", &grade);
+	k = grade / 10;
+	switch (k)
+	{
+	case 10://注意case和数字之间有空格
+		case 9:
+		printf("A\n");
+		break;
+		case 8:
+		printf("B");
+		break;
+		case 7:
+		printf("C");
+			break;
+		case 6:
+		printf("D");
+		break;
+	default:
+		printf("E");
+		break;
+	}
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int x, y;
+	scanf("%d", &x);
+	if (x >= 0)
+		y = x * x - 1;
+	else
+		y = 2*x * x * x - x + 1;
+	printf("%d", y);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int i = 0, sum = 1;
+	for (i = 1; i <= 5; i++)
+	{
+		sum *= i;
+	}
+	printf("%d\n", sum);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int i = 0, j = 0, sum = 0, s = 1;
+	for (i = 1; i <= 5; i++)
+	{
+		s = 1;//保证每次s从1开始乘
+		for (j = 1; j <= i; j++)
+		{
+			s *= j;
+		}
+		sum += s;
+	}
+	printf("%d\n", sum);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int i = 0, sum = 0, s = 1;
+	for (i = 1; i <= 5; i++)
+	{
+		s *= i;
+		sum += s;
+	}
+	printf("%d\n", sum);
+	return 0;
+}
+c++的一小步，我的一大步
+#include<iostream>
+using namespace std;
+int main()
+{
+	cout << "hello world" << endl;
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int i, a[10], max, min, avg, s = 0;
+	for (i = 0; i <= 10; i++)
+	scanf("%d\n", a[i]);
+	max = min = a[0];
+	for (i = 0; i <= 10; i++)
+	{
+		if (a[i] > max)
+		
+			max = a[i];
+		
+			if (a[i] < min)
+			
+				min = a[i];
+			
+		s += a[i];
+
+	}
+	s = s - max - min;
+	avg = s / 8;
+	printf("%d\n", avg);
+	return 0;
+}
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i;
+	double  a[10], max, min, avg, s = 0;
+	
+	cout << "请输入十个分数" << endl;
+	for(i=1; i<10; i++)
+	cin >> a[i];
+	max = min = a[0];
+	for (i = 1; i < 10; i++)
+	{
+		if (a[i] > max) max = a[i];
+		if (a[i] <min) min = a[i];
+		s += a[i];
+	}
+	s = s - max - min;
+	avg = s / 8;
+	cout << "平均值为:" << avg << endl;
+	return 0;
+}
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i;
+	double a[10], max, min, sum, s = 0, avg;
+	cout << "请输入十个数" << endl;
+	for (i = 1; i < 10; i++)
+		cin >> a[i];
+	max = min = a[0];
+	for (i = 1; i < 10; i++)
+	{
+		if (max < a[i]) max = a[i];
+		if (min > a[i]) min = a[i];
+		s += a[i];
+	}
+	s = s - max - min;
+	avg = s / 8;
+	cout << avg << endl;
+	return 0;
+}
+
+
+#include<stdio.h>
+#include<windows.h>
+#include<string.h>
+int main()
+{
+	char arr1[] = "you asshole!!!!!!";
+	char arr2[] = "*****************";
+	int left = 0;
+	int right = strlen(arr1) - 1;
+	
+	while (left <= right)
+	{
+		arr2[left] = arr1[left];
+		arr2[right] = arr1[right];
+		printf("%s\n", arr2);
+		Sleep(1000);
+		system("cls\n");
+		
+		left++;
+		right--;
+	}
+	printf("%s\n", arr1);
+	return 0;
+
+
+}
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char password[20] = {0};
+	
+	int i = 0;
+	for (i = 0; i <3; i++)
+	{
+		scanf("%s", password);
+		if (strcmp(password, "123456") == 0)
+		{
+			printf("right\n");
+			break;
+		}
+		else
+		{
+			printf("wrong\n");
+			
+		}
+	}
+	if (i == 3)
+		printf("error\n");
+	return 0;
+}
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char password[20] = { 0 };
+	int i = 0;
+	for (i = 0; i < 3; i++)
+	{
+		printf("请输入密码：\n");
+		scanf("%s", password);
+		if (strcmp(password, "123456") == 0)
+		{
+			printf("correct\n");
+			break;
+		}
+		else
+		{
+			printf("wrong\n");
+		}
+	}
+	if (i == 3)
+		printf("error\n");
+	return 0;
+}
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int i = 0;
+	char password[20] = { 0 };
+	for (i = 0; i < 3; i++)
+	{
+		printf("please input your password\n");
+		scanf("%s", password);//注意这里scanf的password不加&,这个放for里面
+		if (strcmp(password, "123456") == 0)
+		{
+			printf("password is correct\n");
+			break;
+		}
+		else
+		{
+			printf("please input again\n");
+		}
+	}
+	if (i == 3)
+		printf("wrong password");
+	return 0;
+
+
+}
+
+
+
+#include<stdio.h>
+int main()
+{
+	int i, n, s = 1, sum = 0;
+	printf("请输入n\n");
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		s *= i;
+		sum += s;
+	}
+	printf("%d\n", sum);
+	return 0;
+
+
+}
+#include<stdio.h>
+int main()
+{
+	int i, n, j, s = 1, sum = 0;
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		s = 1;
+		for (j = 1; j <= i; j++)
+		{
+			s *= j;
+		}
+		sum += s;
+	}
+	printf("%d\n", sum);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int i = 0, sum = 0, s = 1, n = 0;
+	printf("请输入n\n");
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		s *= i;
+		sum += s;
+	}
+	printf("%d\n", sum);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int i = 0, j = 0, sum = 0, s = 1, n = 0;
+	printf("input n\n");
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		s = 1;
+		for (j = 1; j <=i; j++)
+		{
+			s *= j;
+		}
+		sum += s;
+	}
+	printf("%d\n", sum);
+	return 0;
+}
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char password[20] = { 0 };
+	int i = 0;
+	for (i = 0; i < 3; i++)
+	{
+		printf("please input your password\n");
+		scanf("%s", password);
+		if (strcmp(password, "123456") == 0)
+		{
+			printf("password is correct\n");
+		}
+		else
+		{
+			printf("please input again\n");
+		}
+	}
+	if (i == 3)
+	{
+		printf("wrong password\n");
+	}
+	return 0;
+		
+}
+
+
+
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+void meau()
+{
+	printf("***************************\n");
+	printf("********   1. play   ******\n");
+	printf("********   0. exit   ******\n");
+	printf("***************************\n");
+}
+void game()
+{
+	
+	int ret = rand() % 100 + 1;
+	
+	int guess = 0;
+	while (1)
+	{
+		printf("please guess\n");
+		scanf("%d", &guess);
+		if (guess > ret)
+		{
+			printf("please guess smaller\n");
+		}
+		else if (guess < ret)
+		{
+			printf("please guess bigger\n");
+		}
+		else
+		{
+			printf("you are right\n");
+			break;
+		}
+	}
+}
+
+int main()
+
+{
+	int i = 0;
+	srand((unsigned int)time(NULL));
+	do 
+	{
+		meau();
+		printf("please input\n");
+		scanf("%d", &i);
+		switch (i)
+		{
+		case 1:
+			printf("game start\n");
+			game();
+				break;
+		case 0:
+			printf("exit\n");
+			break;
+		default:
+			printf("please input again\n");
+			break;
+		}
+	} while (i);
+		return 0;
+
+}
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+void meau()
+{
+	printf("***************************\n");
+	printf("*******    1.play    ******\n");
+	printf("*******    0.exit    ******\n");
+	printf("***************************\n");
+}
+void game()
+{
+	int guess = 0;
+	int ret = rand() % 100 + 1;
+	
+	while (1)
+	{
+		printf("please guess\n");
+		scanf("%d", &guess);
+		if (guess < ret)
+		{
+			printf("please guess bigger\n");
+		}
+		else if (guess > ret)
+		{
+			printf("please guess smaller\n");
+		}
+		else
+		{
+			printf("you are right\n");
+			break;
+		}
+	}
+}
+
+int main()
+{
+	int i = 0;
+	srand((unsigned int)time(NULL));
+	do
+	{
+		meau();
+		printf("please input\n");
+		scanf("%d", &i);
+		switch (i)
+		{
+
+		case 1:
+		
+			printf("game start\n");
+			game();
+			break;
+		
+		case 0:
+		
+			printf("exit\n");
+			break;
+		
+		default:
+		
+			printf("please input again\n");
+			break;
+		
+		}
+		
+
+
+
+		
+	} while (i);
+		return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int i = 0, s = 0, sum = 0, a[10], max, min,avg=0;
+	for (i = 0; i < 10; i++)
+	
+		scanf("%d", &a[i]);
+	
+	max = min = a[0];
+	for (i = 0; i < 10; i++)
+	{
+		if (max < a[i])
+		{
+			max = a[i];
+		}
+		if (min > a[i])
+		{
+			min = a[i];
+		}
+		s += a[i];
+	}
+	sum = s - max - min;
+	avg = sum / 8;
+	printf("%d\n", avg);
+
+	return 0;
+}
+ #include<stdio.h>
+int main()
+{
+	int i, a[10], max, min, s = 0, avg;
+	for (i = 0; i < 10; i++)
+		scanf("%d", &a[i]);//还是得用%d和&
+	max = min = a[0];
+	for (i = 0; i < 10; i++)
+	{
+		if (max < a[i])
+		{
+			max = a[i];
+		}
+		if (min > a[i])
+		{
+			min = a[i];
+		}
+		s += a[i];
+	}
+	s = s - max - min;
+	avg = s / 8;
+	printf("%d\n", avg);
+	return 0;
+
+}
+
+#include<stdio.h>
+int main()
+{
+	int a = 0, b = 0, c = 0;
+	for (a = 1; a <= 2; a++)
+	{
+		for (b = 0; b <= 4; b++)
+		{
+			for (c = 0; c <= 4; c++)
+			{
+				if (a != b && b != c && a != c)
+					printf("%d%d%d   ", a, b, c);
+			}
+		}
+	}
+	
+	return 0;
+}
+ //#include<stdio.h>
+int main()
+{
+	int a, b, c;
+	for (a = 1; a <= 9; a++)
+	{
+		for (b = 0; b <= 9; b++)
+		{
+			for (c = 0; c <= 9; c++)
+			{
+				if (a != b && b != c && a != c)
+				{
+					printf("%d%d%d     ", a, b, c);
+				}
+			}
+		}
+	}
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a = 0, b = 0, c = 0, temp = 0;
+	printf("input a,b,c:\n");
+	scanf("%d%d%d", &a, &b, &c);
+	if (a < b)
+	{
+		temp = a;
+		a = b;
+		b = temp;
+	}
+	if (a < c)
+	{
+		temp = a;
+		a = c;
+		c = temp;
+	}
+	if (b < c)
+	{
+		temp = b;
+		b = c;
+		c = temp;
+	}
+	printf("%d%d%d\n", a, b, c);
+
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	scanf("%d%d%d", &a, &b, &c);
+	if (a < b)
+	{
+		int tmp = a;
+		a = b;
+		b = tmp;
+	}
+	if (a < c)
+	{
+		int tmp = a;
+		a = c;
+		c = tmp;
+	}
+	if (b < c)
+	{
+		int tmp = b;
+		b = c;
+		c = tmp;
+	}
+	printf("%d %d %d\n", a, b, c);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int i = 0;
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 3 == 0)
+			printf("%d ", i);
+	}
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int a = 0, b = 0, max = 0;
+	printf("input a,b:\n");
+	scanf("%d%d", &a, &b);
+	if (a > b)
+	{
+		max = b;
+	}
+	else
+		max = a;
+	while (1)
+	{
+		if (a % max == 0 && b % max == 0)
+		{
+			printf("%d\n", max);
+			break;
+		}
+		else
+		{
+			max--;
+		}
+	}
+	return 0;
+}
+ //#include<stdio.h>
+int main()
+{
+	int a = 0, b = 0;
+	int max = 0;
+	printf("please input two number:");
+	scanf("%d%d", &a, &b);
+	if (a > b)
+		max = b;
+	else
+		max = a;
+	while (1)
+	{
+		if (a%max==0&&b%max==0)
+		{
+			printf("%d", max);
+			break;
+		}
+		else
+		{
+			max--;
+		}
+	}
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a = 0, b = 0, t = 0;
+	printf("input a,b:\n");
+	scanf("%d%d", &a, &b);
+	while (t = a % b)
+	{
+		a = b;
+		b = t;
+	}
+	printf("%d\n", b);
+	return 0;
+}
+ //#include<stdio.h>
+int main()
+{
+	int a = 0, b = 0, t = 0;
+	printf("please input two number:");
+	scanf("%d%d", &a, &b);
+	while (t = a % b)//若整除则为0，判断为假，跳出循环
+	{
+		a = b;
+		b = t;
+		
+	}//辗转相除法
+	printf("%d\n", b);
+		return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a = 0, b = 0, max;
+	printf("Please input two numbers:");
+	scanf("%d%d", &a, &b);
+	if (a > b)
+	{
+		max = b;
+	}
+	else
+	{
+		max = a;
+	}
+	while (1)
+	{
+		if (a % max == 0 && b % max == 0)
+		{
+			printf("%d", max);
+
+			break;
+		}
+		else
+		{
+			max--;
+		}
+
+	}
+	
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a = 0, b = 0, t = 0;
+	printf("please input two numbers:");
+	scanf("%d%d", &a, &b);
+	while (t = a % b)
+	{
+		a = b;
+		b = t;
+		
+	}
+	printf("%d", b);
+	return 0;
+}
+
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	
+	double x, y;
+	char c;
+	
+	
+	while (1)
+	{
+		printf("请输入算术表达式：");
+		scanf("%lf%c%lf", &x, &c, &y);
+		
+
+		switch (c)
+		{
+		case '+': printf("结果的值为：%lf\n", x + y); break;
+		case '-': printf("结果的值为：%lf\n", x - y); break;
+		case 'x':
+		case '*':	printf("结果的值为：%lf\n", x * y); break;
+		case '/': printf("结果的值为：%0.3lf\n", x / y); break;
+		case '%': printf("结果的值为：%lf\n", fmod(x, y)); break;
+		
+		
+		}
+		if (c == '#')
+			
+			break;
+	}
+	
+	
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a = 0, b = 0, t = 0, max = 0;
+	printf("please input two number:\n");
+	scanf("%d%d", &a, &b);
+	while (t = a % b)
+	{
+		a = b;
+		b = t;
+	}
+	printf("%d\n", b);
+	return 0;
+}
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{
+	char input[20] = { 0 };
+	system("shutdown -s -t 60");
+again:
+	printf("输入：我不是是猪\n");
+	scanf("%s", input);
+	if (strcmp(input, "我不是猪") == 0)
+	{
+		system("shutdown -a");
+	}
+	else
+	{
+		goto again;
+	}
+	return 0;
+}
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i = 0, count = 0;
+	int j = 0;
+	for (i = 101; i < 200; i++)
+	{
+		
+		int flag = 1;
+		for (j = 2; j < sqrt(i); j++)
+		{
+			if (i % j == 0)
+			{
+				flag = 0;
+				break;
+			}
+			
+			
+		}
+		if (flag == 1)
+			printf("%d\n", i);
+		count++;
+
+	}
+	printf("\n%d\n", count);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int y = 0;
+	for (y = 1000; y <= 2000; y++)
+	{
+		if ((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0))
+		{
+			printf("%d ", y);
+		}
+	}
+	return 0;
+}
+
+#include<stdio.h>
+int get_large(int x, int y)
+{
+	if (x > y)
+		return x;
+	else
+		return y;
+}
+int main()
+{
+	int a = 0, b = 0, max = 0;
+	printf("input a,b:\n");
+	scanf("%d%d", &a, &b);
+	max = get_large(a, b);
+		printf("%d\n", max);
+	return 0;
+}
+#include<stdio.h>
+#include<math.h>
+int is_prime(int x)
+{
+	int y = 0;
+	for (y = 2; y < sqrt(x); y++)
+	{
+		if (x % y == 0)
+		{
+			return 0;
+		}
+	}
+	return 1;//这个放在for外面
+}
+int main()
+{
+	int n = 0;
+	printf("input n:\n");
+	scanf("%d", &n);
+	if (is_prime(n) == 1)
+		printf("yes");
+	else
+		printf("no");
+	return 0;
+}
+#include<stdio.h>
+#include<math.h>
+int is_prime(int x)
+{
+	
+	for (int j = 2; j <= sqrt(x); j++)
+	{
+		
+		if (x % j == 0)
+		{
+			return 0;
+		}
+	}
+	return 1;
+}
+int main()
+{
+	int i = 0;
+	for (i = 3; i <= 100; i++)
+	{
+		if (is_prime(i) == 1)
+		{
+			printf("%d  ", i);
+		}
+	}
+	return 0;
+}
+#include<stdio.h>
+int is_leap_year(int x)
+{
+	return((x % 4 == 0) && (x % 100 != 0) || (x % 400 == 0));
+}
+int main()
+{
+	int y = 0;
+	for (y = 1000; y <= 2000; y++)
+	{
+		if (is_leap_year(y) == 1)
+			printf("%d ", y);
+
+	}
+	return 0;
+}
+#include<stdio.h>
+int is_leap_year(int x)
+{
+	return((x % 4 == 0) && (x % 100 != 0) || (x % 400 == 0));
+}
+
+int main()
+{
+	int year = 0;
+	printf("请输入年份:");
+	scanf("%d", &year);
+	if (is_leap_year(year) == 1)
+		printf("this year is a leap year");
+	else
+		printf("this year is not a leap year");
+
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int i = 0;
+	int sum = 1, n;
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)//i<=n
+	{
+		sum = sum * i;
+		
+	}
+	printf("%d\n", sum);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int n=0, i = 0, j=0,s=0;
+	printf("请输入n的值\n");
+	scanf("%d", n);
+	for (i = 1; i <= n; i++)
+	{
+		int sum = 1;
+		for (j = 1; j <= i; j++)
+		{
+			sum *= j;
+			
+		}
+		s += sum;
+	}
+	printf("%d\n", s);
+	return 0;
+}
+#include<stdio.h>
+int f(int n)
+{
+	int fac;
+	if ((n == 1)||(n==0)) 
+		fac = 1;
+	else
+		fac = f(n - 1) * n;
+	return fac;
+}
+int main()
+{
+	int sum = 0;
+	int n = 0;
+	printf("请输入n的值");
+	scanf("%d\n", &n);
+	sum = f(n);
+	printf("%d!=%d", n, sum);
+	return 0;
+}
+#include<stdio.h>
+int f(int n)
+{
+	int fac=0;
+	if ((n == 1) || (n == 0))
+		fac = 1;
+	else
+		fac= f(n - 1) * n;
+	return fac;
+}
+int main()
+{
+	int n = 0;
+	int sum = 0;
+	printf("请输入n的值");
+	scanf("%d", &n);
+	sum = f(n);
+	printf("%d!=%d", n, sum);
+	return 0;
+}
+
+#include<stdio.h>
+#include<string.h>
+void move(char x, char y)
+{
+	printf("%c------>%c", x, y);
+}
+void hannuo(int n, char one, char two, char three)
+{
+	if (n == 1)
+		move(one, three);
+	else
+	{
+		hannuo(n - 1, one, three, two);
+		move(one, three);
+		hannuo(n - 1, two, one, three);
+	}
+}
+int main()
+{
+	int n = 0;
+	printf("Please input the number of hannuo");
+	scanf("%d", n);
+	hannuo(n, 'A', 'B', 'C');
+	
+
+	
+	
+	return 0;
+}
+#include<stdio.h>
+void main()
+{
+	float pi, h, r, c, s, sq, vq, vz;
+	pi = 3.1415926;
+	printf("input r,h:\n");
+	scanf("%f%f", &r, &h);
+	c = 2 * pi * r;
+	s = r * r * pi;
+	sq = 4 * pi * r * r;
+	vq = 4.0 / 3.0 * pi * r * r * r;
+	vz = pi * r * r * h;
+	printf("c=%6.2f\n", c);
+	printf("s=%6.2f\n", s);
+	printf("sq=%6.2f\n", sq);
+	printf("vq=%6.2f\n", vq);
+	printf("vz=%6.2f\n", vz);
+
+}
+#include<stdio.h>
+void main()
+{
+	long n = 1234567;
+	printf("%ld,%lo,%x\n", n, n, n);
+}
+#include<stdio.h>
+void main()
+{
+	int a, b;
+	float x, y;
+	char c1, c2;
+	scanf("a=%d b=%d", &a, &b);
+	scanf(" %f  %e", &x, &y);
+	scanf("%c  %c", &c1, &c2);
+	printf("a=%d,b=%d,x=%f,y=%f,c1=%c,c2=%c\n",a,b,x,y, c1, c2);
+}
+#include<stdio.h>
+int main()
+{
+	float F = 0;
+	float c = 0;
+	printf("请输入一个华氏温度\n");
+	scanf("%f", &F);
+	c = (5 * (F - 32)) / 9;
+	printf("%6.2f\n", c);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a, b, c, temp, max;
+	printf("input three integer:");
+	scanf("%d%d%d", &a, &b, &c);
+	temp = (a > b) ? a : b;
+	max = (temp > c) ? temp : c;
+	printf("max=%d\n", max);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	float score;
+	char grade;
+	printf("input student score:");
+	scanf("%f", &score);
+	while (score > 100 || score < 0)
+	{
+		printf("error\n");
+	}
+	switch ((int)(score / 10))
+	{
+	case 10:
+	case 9: grade = 'A'; break;
+	case 8: grade = 'B'; break;
+	case 7: grade = 'C'; break;
+	case 6: grade = 'D'; break;
+	case 5:
+	case 4:
+	case 3:
+	case 2:
+	case 1:
+	case 0: grade = 'E';
+
+	}
+	printf("score:%5.1f,grade:%c\n", score, grade);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int x = 0;
+	int y = 0;
+	printf("input x:");
+	scanf("%d", &x);
+	if (x < 1)
+	{
+		y = x;
+	}
+	else if (x >= 1 && x < 10)
+	{
+		y = 2 * x - 1;
+	}
+	else
+	{
+		y = 3 * x - 10;
+	}
+	printf("%d\n", y);
+		return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a = 0, sn = 0, n = 0, i = 0,tn=0;
+	printf("input a,n");
+	scanf("%d %d", &a, &n);
+	for (i = 1; i <= n; i++)
+	{
+		tn += a;
+		sn += tn;
+		a = a * 10;
+	}
+	printf("%d\n", sn);
+
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int i = 0, j = 0;
+	int k = 0;
+	
+	float sum = 0;
+	int s1 = 0, s2 = 0;
+	float s3 = 0;
+		for (i = 1; i <= 100; i++)
+		{
+			s1 += i;
+		}
+	for (j = 1; j <= 50; j++)
+	{
+		s2 = s2 + j * j;
+	}
+	for (k = 1; k <= 10; k++)
+	{
+		
+		s3 = s3 + 1.0/k;
+	}
+	sum = s1 + s2 + s3;
+	printf("%f\n", sum);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	float a = 0, b = 0, c = 0, d = 0, e = 0, i = 0;
+	float avg = 0;
+	for (i = 1; i <= 6; i++)
+	{
+		scanf("%f%f%f%f%f", &a, &b, &c, &d, &e);
+		avg = (a + b + c + d + e) / 5.0;
+		printf("%f\n", avg);
+	}
+	
+	return 0;
+}
+#include<stdio.h>
+void main()
+{
+	int i, j, min, temp, a[6];
+	printf("Enter data:\n");
+	for (i = 1; i <= 5; i++)
+	{
+		printf("a[%d]=", i);
+		scanf("%d", &a[i]);
+
+	}
+	printf("\n");
+	for (i = 1; i <= 5; i++)
+		printf("%5d", a[i]);
+	printf("\n");
+	for (i = 1; i <= 4; i++)
+	{
+		min = i;
+		for (j = i + 1; j <= 5; j++)
+			if (a[min] > a[j])
+				min = j;
+		temp = a[i];
+		a[i] = a[min];
+		a[min] = temp;
+
+	}
+	printf("\nThe sorted numbers:");
+	for (i = 1; i <= 5; i++)
+		printf("%5d", a[i]);
+}
+#include<stdio.h>
+void main()
+{
+	int i, j, a[3][3], sum = 0;
+	printf("Enter data:\n");
+	for (i = 0; i < 3; i++)
+		for (j = 0; j < 3; j++)
+			scanf("%d", &a[i][j]);
+	for (i = 0; i < 3; i++)
+		for(j=0; j<3; j++)
+		if (i == j)
+			sum = sum + a[i][j];
+	printf("sum=%d\n", sum);
+
+	
+}
+#include <iostream>
+using namespace std;
+void main(void)
+{
+	int i = 0;
+	cout << "请输入n个学生的成绩" << endl;
+	float num[10];
+	float count = 0;
+	float avg = 0;
+	for (i = 0; i < 10; i++)
+	{
+		cout <<  i + 1 << "号:";
+		cin >> num[i];
+		count = count + num[i];
+	}
+
+	avg = count / i;
+	cout << "平均分为" << avg << endl;
+	cout << "输出高于平均分的学生" << endl;
+	for (i = 0; i < 10; i++)
+	{
+		if (num[i] > avg)
+		{
+			cout <<  i + 1 << "号:" << num[i] << endl;
+		}
+	}
+}
+#include<stdio.h>
+#include<math.h>
+double fun(double x, int n)
+{
+	double s = 1, p = 1, t = 1;
+	int i, j;
+	for (i = 1; i <= n; i++)
+	{
+		t *= i;
+		p *= x;
+		s += p / t;
+	}
+	return s;
+}
+void main()
+{
+	printf("\n%f\n", fun(0.3, 10));
+}
+#include"stdio.h"
+int fun(int score[], int m, int below[])
+{
+int i, k = 0, aver = 0;
+for (i = 0; i < m; i++)
+	aver += score[i];
+aver /= m;
+for(i=0;i<m;i++)
+	if (score[i] < aver)
+	{
+		below[k] = score[i];
+		k++;
+	}
+return k;
+}
+#include<stdio.h>
+void main()
+{
+	int i, n, below[9];
+	int score[9] = { 10,20,30,40,50,60,70,80,90 };
+	n = fun(score, 9, below);
+	printf("\nbelow the average are:");
+	for (i = 0; i < n; i++)
+		printf("%d", below[i]);
+}
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#define I 20
+#define R 340
+int main()
+{
+	system("mode con cols=80 lines=60 ");
+	system("title ");
+	char data[200][60] = { {"\nHappy birthday to you！\n"} ,{"\nHappy birthday to you！\n"} ,{"\nHappy birthday to you！\n"} ,{"\nHappy birthday to you！\n"} ,{"\nHappy birthday to you！\n"} ,{"\nHappy birthday to you！\n"} ,{"\nHappy birthday to you！\n"}
+	};
+	int sign = 0;
+	int i, j, e;
+	int a;
+	long time;
+	for (i = 1, a = I; i < I / 2; i++, a--)
+	{
+		for (j = (int)(I - sqrt(I * I - (a - i) * (a - i))); j > 0; j--)
+			printf(" ");
+		for (e = 1; e <= 2 * sqrt(I * I - (a - i) * (a - i)); e++)
+			printf("\3");
+		for (j = (int)
+			(2 * (I - sqrt(I * I - (a - i) * (a - i)))); j > 0; j--)
+			printf(" ");
+		for (e = 1; e <= 2 * sqrt(I * I - (a - i) * (a - i)); e++)
+			printf("\3");
+		printf("\n");
+	}
+	for (i = 1; i < 80; i++)
+	{
+		if (i == 25)
+		{
+			printf("======HAPPY BIRTHDAY======");
+			i += 30;
+		}
+		printf("\3");
+	}
+	printf("\n");
+	for (i = 1; i <= R / 2; i++)
+	{
+		if (i % 2 || i % 3)
+			continue;
+		for (j = (int)(R - sqrt(R * R - i * i)); j > 0; j--)
+			printf(" ");
+		for (e = 1; e <= 2 * (sqrt(R * R - i * i) - (R - 2 * I)); e++)
+			printf("\3");
+		printf("\n");
+	}
+
+	for (; ; )
+	{
+		system("color a");
+		for (time = 0; time < 99999999; time++); system("color b");
+		for (time = 0; time < 99999999; time++); system("color c");
+		for (time = 0; time < 99999999; time++); system("color d");
+		for (time = 0; time < 99999999; time++); system("color e");
+		for (time = 0; time < 99999999; time++); system("color f");
+		for (time = 0; time < 99999999; time++);
+		system("color 0"); for (time = 0; time < 99999999; time++);
+		system("color 1"); for (time = 0; time < 99999999; time++);
+		system("color 2"); for (time = 0; time < 99999999; time++);
+		system("color 3"); for (time = 0; time < 99999999; time++);
+		system("color 4");
+		for (time = 0; time < 99999999; time++); system("color 5");
+		for (time = 0; time < 99999999; time++); system("color 6");
+		for (time = 0; time < 99999999; time++); system("color 7");
+		for (time = 0; time < 99999999; time++); system("color 8");
+		for (time = 0; time < 99999999; time++); system("color 9");
+		for (time = 0; time < 99999999; time++); system("color ab");
+		for (time = 0; time < 99999999; time++); system("color ac");
+		for (time = 0; time < 99999999; time++); system("color ad");
+		for (time = 0; time < 99999999; time++); system("color ae");
+		for (time = 0; time < 99999999; time++); system("color af");
+		for (time = 0; time < 99999999; time++);
+		printf("%s", data[sign]);
+		sign++;
+	}
+	return 0;
+}
+#include<stdio.h>
+void print(unsigned int n)
+{
+	if (n > 9)
+	{
+		print(n / 10);
+	}
+		printf("%d ", n % 10);
+	
+}
+int main()
+{
+
+	 unsigned int num = 0;
+	 printf("input num:\n");
+	 scanf("%u", &num);
+	 print(num);
+	 
+
+	
+	return 0;
+}
+#include<stdio.h>
+void print(unsigned int n)
+{
+	if (n > 9)
+	{
+		print(n / 10);
+	}
+	printf("%d ", n % 10);
+}
+int main()
+{
+	unsigned int num = 0;
+	printf("input num:\n");
+	scanf("%u", &num);
+	print(num);
+	
+	return 0;
+}
+#include<stdio.h>
+int my_strlen(char* str)
+{
+	if (*str != '\0')
+		return 1 + my_strlen(str + 1);
+	else
+	return 0;
+}
+int main()
+{
+	char arr[] = "rcw";
+	printf("%d\n", my_strlen(arr));
+return 0;
+}
+#include<stdio.h>
+int my_strlen(char* str)
+{
+	if (*str != 0)
+		return 1 + my_strlen(str + 1);
+	else
+		return 0;
+}
+int main()
+{
+	char arr[] = "0";
+	printf("input arr:\n");
+	scanf("%s", arr);
+	printf("%d\n", my_strlen(arr));
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int n = 0;
+	printf("input n:\n");
+	scanf("%d", &n);
+	int i = 0;
+	int sum = 1;
+	for (i = 1; i <= n; i++)
+	{
+		sum *= i;
+	}
+	printf("%d\n", sum);
+	return 0;
+}
+#include<stdio.h>
+int fac(int n)
+{
+	if (n <= 1)
+		return 1;
+	else
+		return n * fac(n - 1);
+}
+int main()
+{
+	int n = 0;
+	printf("input n:\n");
+	scanf("%d", &n);
+	int ret = fac(n);
+	printf("%d\n", ret);
+}
+#include<stdio.h>
+int fib(int n)
+{
+	if (n <= 2)
+		return 1;
+	else
+		return fib(n - 1) + fib(n - 2);
+}
+int main()
+{
+	int n = 0;
+	printf("input n:\n");
+	scanf("%d", &n);
+	int ret = fib(n);
+	printf("%d\n", ret);
+	return 0;
+}
+#include<stdio.h>
+int fib(int n)
+{
+	int a = 1;
+	int b = 1;
+	int c = 1;
+	while (n > 2)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
+}
+int main()
+{
+	int n = 0;
+	printf("input n:\n");
+	scanf("%d", &n);
+	int ret = fib(n);
+	printf("%d\n", ret);
+	return 0;
+}
+#include<stdio.h>
+int fib(int n)
+{
+	int a = 1;
+	int b = 1;
+	int c = 1;
+	while (n > 2)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
+}
+int main()
+{
+	int n = 0;
+	printf("input n:\n");
+	scanf("%d", &n);
+	int ret = fib(n);
+	printf("%d\n", ret);
+	return 0;
+}
+#include<stdio.h>
+int my_strlen(char* a)
+{
+	if (*a != '\0')
+		return 1 + my_strlen(a + 1);
+	else
+		return 0;
+}
+int main()
+{
+	char arr[] = "rcw";
+	printf("%d\n", my_strlen(arr));
+	return 0;
+}
+#include<stdio.h>
+void print_table(int n)
+{
+	int i = 0, j = 0;
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 1; j <= i; j++)
+		{
+			printf("%d*%d=%d ", i, j, i * j);
+		}
+		printf("\n");
+	}
+}
+int main()
+{
+	int n = 0;
+	printf("input n:\n");
+	scanf("%d", &n);
+	print_table(n);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int arr[] = {1,2,3,4,5,6,7,8,9};
+	
+	int i = 0;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int* p = arr;
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ",*p);
+		p++;
+	}
+	
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int arr[3][4] = { {1,2},{3,4},{5,6} };
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int arr[][4] = { {1,2},{3,4},{5,6} };
+	int i = 0, j = 0;
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			printf("*arr[%d][%d]=%p\n", i, j, &arr[i][j]);
+		}
+	}
+	
+	return 0;
+}
+#include<stdio.h>
+void bubble_sort(int arr[],int sz)
+{
+	int i = 0;
+	
+	for (i = 0; i < sz - 1; i++)
+	{
+		int j = 0;
+		for (j = 0; j < sz - 1 - i; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				int temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+	
+}
+int main()
+{
+	int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
+	int i = 0;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	bubble_sort(arr, sz);
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	return 0;
+}
+#include<stdio.h>
+void bubble_sort(int arr[], int sz)
+{
+	int i = 0;
+	for (i = 0; i < sz - 1; i++)
+	{
+		int j = 0;
+		for (j = 0; j < sz - 1 - i; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				int temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+		 }
+		}
+	}
+}
+int main()
+{
+	int arr[] = { 0,3,4,6,7,8,9 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	bubble_sort(arr, sz);
+	for (int i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	return 0;
+} 
+#include<stdio.h>
+#include"game.h"
+void meau()
+{
+	printf("***********************************\n");
+	printf("**********   1. play   ************\n");
+	printf("**********   0. exit   ************\n");
+	printf("***********************************\n");
+}
+void game()
+{
+	char board[ROW][COL];
+	InitBoard(board, ROW, COL);
+	DisplayBoard(board, ROW, COL);
+	char ret = 0;
+	while (1)
+	{
+		Playerturn(board, ROW, COL);
+		DisplayBoard(board, ROW, COL);
+		ret=IsWin(board, ROW, COL);
+		if (ret != 'C')
+			break;
+
+		Computerturn(board, ROW, COL);
+		DisplayBoard(board, ROW, COL);
+		ret = IsWin(board, ROW, COL);
+		if (ret != 'C')
+			break;
+	}
+	if (ret = '*')
+	{
+		printf("玩家赢了\n");
+	}
+	else if (ret = '#')
+	{
+		printf("电脑赢了\n");
+	}
+	else 
+	{
+		printf("平局\n");
+	}
+	DisplayBoard(board, ROW, COL);
+}
+int main()
+{
+	srand((unsigned int)time(NULL));
+	int input = 0;
+	do
+	{
+
+		meau();
+		printf("please input:\n");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			printf("game star!\n");
+			game();
+			break;
+		case 0:
+			printf("exit!\n");
+			break;
+		default:
+			printf("please input again:\n");
+			break;
+		}
+
+	} while (input);
+	return 0;
+}
+
+#include<stdio.h>
+#include"game.h"
+void meau()
+{
+	printf("***************************\n");
+	printf("********   1.play   *******\n");
+	printf("********   0.exit   *******\n");
+	printf("***************************\n");
+}
+void game()
+{
+	char board[ROW][COL];
+	InitBoard(board,ROW,COL);//声明初始化棋盘函数
+	PrintBoard(board, ROW, COL);//声明打印棋盘函数
+	char ret = 0;
+	while (1)//下棋是反复循环的
+	{
+		Playerturn(board, ROW, COL);//玩家走棋
+		PrintBoard(board, ROW, COL);//走一次打印一次棋盘
+		ret=IsWin(board, ROW, COL);//走一次判断是否赢
+		if (ret != 'C')//如果不是C说明要么赢要么平局，则跳出下棋循环
+		
+			break;
+		
+		
+		Computerturn(board, ROW, COL); //电脑走棋
+		PrintBoard(board, ROW, COL);
+		ret=IsWin(board, ROW, COL);
+		if (ret != 'C')
+		
+			break;
+		
+	}
+	if (ret == '*')//跳出while循环后判断返回值，以此确定输赢
+	{
+		printf("玩家赢了\n");
+	}
+	else if (ret == '#')
+	{
+		printf("电脑赢了\n");
+	}
+	else
+	{
+		printf("平局\n");
+	}
+	PrintBoard(board, ROW, COL);
+
+	
+
+
+}
+int main()
+
+
+
+{
+	int input = 0;
+	srand((unsigned int)time(NULL));//每次开始时候随机取一个，注意unsigned int型式
+	                                //注意要引头文件
+	
+	do
+	{
+		meau();//print the meau
+		printf("Play or Not?\n");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			printf("game start!\n");
+			game();
+			break;
+		case 0:
+			printf("exit!\n");
+			break;
+		default:
+			printf("Please input again!\n");
+		}
+	} while (input);//if input other positive number,start circulation
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+    char  s[] = "Our teacher teaches C language";
+	int i, j;
+	printf("\nBefore delete is: %s", s);
+	for (i = j = 0; s[i] != '\0'; i++)
+		if (s[i] != '  ')
+			s[j++] = s[i];
+	s[j] = '\0';
+	printf("\nNow is: %s\n", s);
+
+	return 0;
+}
+#include<stdio.h>
+#include<ctype.h>
+void fun(char* str)
+{
+	char* str_c = str;
+	int i, j = 0;
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] != ' ')
+			str_c[j++] = str[i];
+	}
+	str_c[j] = '\0';
+	str = str_c;
+}
+
+int main()
+{
+	char str[81];
+	printf("Input a string : ");
+	gets(str);
+	puts(str);
+	fun(str);
+	printf("*** str: %s\n", str);
+}
+#include <stdio.h>                      
+
+void  Del32(char* pstr)
+{
+	char* p;
+	p = pstr;
+	while (*pstr)
+	{
+		if (*pstr != 32)    //空格的ASCII为32
+		{
+			*p = *pstr;
+			p++;
+
+		}
+		pstr++;
+	}
+	  //这个很关键
+
+}
+
+int main()
+{
+	char str[] = "Our teacher teaches C language ";
+
+	puts(str);
+	Del32(str);
+	puts(str);
+}
+#include<stdio.h>
+int * pointer;
+void move(pointer)
+
+{
+	int i, j, t;
+	for(i=0;i<3;i++)
+		for (j = i; j < 3; j++)
+		{
+			t = *(pointer + 3 * i + j);
+			*(pointer + 3 * i + j);
+			*(pointer + 3 * j + i) = t;
+		}
+}
+int main()
+{
+	int a[3][3] = { 1,2,3,4,5,6,7,8,9 }, * p, i;
+	p = &a[0][0];
+	move(p);
+	for (i = 0; i < 3; i++)
+		printf("\n%5%5d%5d", a[i][0], a[i][1], a[2]);
+	return 0;
+}
+#include<stdio.h>
+int b[3][3];
+int main()
+{
+	int i, j;
+	void zz(int a[][3]);
+	int a[3][3];
+	for (i = 0; i < 3; i++)
+		for (j = 0; j < 3; j++)
+			scanf("%d", &a[i][j]);
+	zz(a);
+	return 0;
+}
+void zz(int a[][3])
+{
+	int i, j;
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+			b[j][i] = a[i][j];
+	}
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+			printf("%-5d", b[i][j]);
+		printf("\n");
+	}
+}
+#include"stdio.h"
+struct
+{
+	int year;
+	int month;
+	int day;
+
+}data;
+#include<stdio.h>
+int main()
+{
+	int days;
+	printf("input year,month,day:");
+	scanf("%d,%d,%d", &date.year, &date.month, &date.day);
+	switch (date.month)
+	{
+	case 1: days = date.day; break;
+	case 2: days = date.day+31; break;
+	case 3: days = date.day + 59; break;
+	case 4: days = date.day + 90; break;
+	case 5: days = date.day + 120; break;
+	case 6: days = date.day + 151; break;
+	case 7: days = date.day + 181; break;
+	case 9: days = date.day + 243; break;
+	case 10: days = date.day + 273; break;
+	case 11: days = date.day + 304; break;
+	case 12: days = date.day + 334; break;
+	
+
+
+
+
+	
+	}
+	if ((date.year % 4 == 0 && date.year % 100 != 0 || date.year % 400 == 0) && date.month >= 3)
+		days += 1;
+	printf("\n%d%d is the %dth day in %d.", date.month, date.day, date.year);
+	return 0;
+
+}
+
+#include<stdio.h>
+#include<stdlib.h>
+struct day {
+	int year;
+	int month;
+	int day;
+};
+typedef struct day day;
+int leap_year(int year) {//判断是否为闰年
+	if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) {
+		return 1;//是闰年返回1
+	}
+	return 0;//不是返回0
+}
+int fun(day* p) {
+	int count = 0;
+	int Month[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };//12月各月天数
+	Month[1] += leap_year(p->year);//如果这一年是闰年则二月+1为29天,不是闰年则+0还是28天
+	for (int i = 0; i < p->month - 1; ++i) {//循环相加该天所在月份之前的所有月份天数之和
+		count += Month[i];
+	}
+	count += p->day;//加上还不到整一月的天数
+	return count;
+}
+void main() {
+	day d;
+	day* p = &d;
+	printf("请输入年份\n");
+	while (1) {
+		scanf("%d", &d.year);
+		if (d.year >= 0) {
+			break;
+		}
+		printf("年份必须非负,请重新输入年份\n");
+	}
+	printf("请输入月份\n");
+	while (1) {
+		scanf("%d", &d.month);
+		if (d.month < 1) {
+			printf("月份必须大于0\n");
+			continue;
+		}
+		if (d.month > 12) {
+			printf("月份必须小于等于12\n");
+			continue;
+		}
+		break;
+	}
+	printf("请输入日\n");
+	while (1) {
+		scanf("%d", &d.day);
+		if (d.day < 1) {
+			printf("请输入大于0的天数\n");
+			continue;
+		}
+		if (d.month == 1 || d.month == 3 || d.month == 5 || d.month == 7 || d.month == 8 || d.month == 10 || d.month == 12) {
+			if (d.day > 31) {
+				printf("您输入的天数大于%d月天数,请重新输入\n", d.month);
+				continue;
+			}
+			break;
+		}
+		else if (d.month == 2) {
+			if (leap_year(d.year) == 1 && d.day > 29) {
+				printf("您输入的天数大于%d月天数,请重新输入\n", d.month);
+				continue;
+			}
+			if (leap_year(d.year) == 0 && d.day > 28) {
+				printf("您输入的天数大于%d月天数,请重新输入\n", d.month);
+				continue;
+			}
+			break;
+		}
+		else {
+			if (d.day > 30) {
+				printf("您输入的天数大于%d月天数,请重新输入\n", d.month);
+				continue;
+			}
+			break;
+		}
+	}
+	printf("%d年%d月%d日是该年的第%d天\n", d.year, d.month, d.day, fun(p));
+	system("pause");
+}
+
+#include <stdio.h>
+struct student
+{
+    int num;
+    char name[10];
+    float score[3];
+} stu[5];
+void print(struct student s[]);
+int main()
+{
+    int i, j;
+    for (i = 0; i < 5; i++) {
+        printf("Please enter No.%d student num, name, score: ", i + 1);
+        scanf("%d %s", &stu[i].num, stu[i].name);
+        for (j = 0; j < 3; scanf("%f", &stu[i].score[j++]));
+    }
+    print(stu);
+    return 0;
+}
+void print(struct student s[])
+{
+    int i, j;
+    for (i = 0; i < 5; printf("\n"), i++) {
+        printf("%d %-10s ", s[i].num, s[i].name);
+        for (j = 0; j < 3; printf("%.2f ", s[i].score[j++]));
+    }
+}
+#include<stdio.h>
+struct student {
+    int num;
+    char name[19];
+    int scorea;
+    int scoreb;
+    int scorec;
+};
+
+student input(student s[5]) {
+    for (int i = 0; i < 5; i++) {
+        student* p;
+        p = s + i;
+        scanf("%d %s %d %d %d", &(*p).num, &(*p).name, &(*p).scorea, &(*p).scoreb, &(*p).scorec);
+    }
+}
+
+
+int main() {
+    student stu[5];
+    input(stu);
+  
+    return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a[6] = { 1,2,3,4 };       //定义一维数组a
+	int* p;                         //定义指针数组p 
+	int i, j;
+	p = a;
+	
+	printf("\n按列顺序输出:\n");
+	p = a;
+	for (i = 0; i < 2; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			printf("%d\t", *p);
+			p = p + 2;
+		}
+		printf("\n");
+		p = p - 5;
+	}
+	return 0;
+}
+
+#include<stdio.h>
+#include<string.h>
+#define N 100
+void fun(char s[], char t[])
+{
+	int i, d;
+	d = strlen(s);
+	for (i = 0; i < d; i++)
+		t[i] = s[d - 1 - i];
+	for (i = 0; i < d; i++)
+		t[d + i] = s[i];
+	t[2 * d] = '\0';
+}
+int main()
+{
+	char s[N], t[N];
+	printf("输入一个字符串:");
+	scanf("%s", s);
+	fun(s, t);
+	printf("输出新的字符串为:%s\n", t);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a = 5;
+	int b = 6;
+	printf("%d,%d\n", a, b);
+	printf("%d %d\n", a, b);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a = 0;
+	int b = 0;
+	printf("input a,b:\n");
+	scanf("a=%d,b=%d", &a, &b);
+	printf("%d%d", a, b);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int a = 0;
+	int b = 0;
+	scanf("%d,%d", &a, &b);
+	printf("%d%d", a, b);
+	return 0;
+
+}
+#include<stdio.h>
+int Add(int n)
+{
+	int i = 0;
+	int sum = 0;
+	for (i = 1; i <= n; i++)
+	{
+		sum += i;
+	}
+	return sum;
+}
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	Add(n);
+	printf("%d\n", Add(n));
+	return 0;
+}
+#include<stdio.h>
+int Is_prime(int n)
+{
+	int i = 0;
+	int j = 0;
+	if (n == 1)
+	{
+		return 0;
+	}
+	else
+	{
+		for (i = 2; i < n; i++)
+		{
+			j = n % i;
+			if (j == 0)
+			{
+				return 0;
+			}
+			else
+				return 1;
+		}
+	}
+}
+int main()
+{
+	int n = 0;
+	int s = 0;
+	scanf("%d",&n);
+	s = Is_prime(n);
+	if (s == 0)
+	{
+		printf("该数不是素数\n");
+	}
+	else
+		printf("该数是素数\n");
+	return 0;
+}
+#include<stdio.h>
+int Gy(int m, int n)
+{
+	int t = 0;
+	do {
+		t = m % n;
+		m = n;
+		n = t;
+	} while (t);
+		return m;
+}
+int main()
+{
+	int m = 0;
+	int n = 0;
+	scanf("%d%d", &m, &n);
+	printf("%d\n", Gy(m, n));
+	
+	
+	return 0;
+}
+#include<stdio.h>
+int Gy(int m, int n)
+{
+	if (m <= 0 || n <= 0)
+		return 0;
+	if (m % n == 0)
+		return n;
+	else Gy(n, m % n);
+}
+int main()
+{
+	int m = 0;
+	int n = 0;
+	scanf("%d%d", &m, &n);
+	printf("%d\n", Gy(m, n));
+
+
+	return 0;
+}
+
+#include<stdio.h>
+double Add(int n)
+{
+	if (n == 1)
+		return 1;
+	if (n > 1)
+	{
+		double sum = 0;
+		int i = 0;
+		double s = 0;
+		for (i = 1; i <= n; ++i)
+		{
+			s = 1.0 / (i * (i + 1));
+			sum += s;
+
+		}
+		sum += 1;
+		return sum;
+	}
+}
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	printf("%lf\n", Add(n));
+	return 0;
+}
+#include<stdio.h>
+double Add(int n)
+{
+	int i = 1;
+	double f = -1.0;
+	double s = 0;
+	double sum = 0;
+	
+	
+		for (i = 0; i <= n; i++)
+		{
+			f = (-1) * f;
+			s = f / (2 * i + 1);
+			sum += s;
+		}
+		return sum;
+
+}
+int main()
+{
+
+	int n = 0;
+	scanf("%d", &n);
+	printf("%lf\n", Add(n-1));
+	return 0;
+}
+#include<stdio.h>
+int Add(int n)
+{
+	int i = 0;
+	int s = 0;
+	int t = 1;
+	for (i = 1; i <= n; i++)
+	{
+		t *= i;
+		s += t;
+	}
+	return s;
+}
+int main()
+
+{
+	int n = 0;
+	scanf("%d", &n);
+		printf("%d\n", Add(n));
+	return 0;
+}
+#include<stdio.h>
+int Add()
+{
+	int i = 0;
+	int count = 0;
+	for (i = 100; i<=999; i++)
+	{
+		if ((i / 100 != i % 100 / 10) && (i / 100 != i % 100 % 10) && (i % 100 / 10 != i % 100 % 10) && (i % 2 == 0))
+			count++;
+	}
+	return count;
+
+}
+int main()
+{
+	
+	printf("%d\n", Add());
+	return 0;
+}
+	for (i = 100; i<=999; i++)
+#include<stdio.h>
+void Add(int a[], int n)
+{
+	int i = 0;
+	int j = 0;
+	int t = 0;
+	for (i = 0; i < n-1; i++)
+	{
+		for (j = 0; j < n - 1; j++)
+		{
+			if (a[j] > a[j + 1])
+			{
+				t = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = t;
+			}
+		}
+	}
+	
+}
+int main()
+{
+	int i = 0;
+	int n = 0;
+	scanf("%d", &n);
+	int a[256] = { 0 };
+	for (i = 0; i < n; i++)
+	
+		scanf("%d", &a[i]);
+	
+	Add(a, n);
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", a[i]);
+	}
+	return 0;
+}
+#include<stdio.h>
+void bubble(int a[], int n)
+{
+	int i, j, t;
+	for (i = 0; i < n - 1; i++)
+	{
+		for (j = 0; j < n - 1; j++)
+		{
+			if (a[j] > a[j + 1])
+			{
+				t = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = t;
+			}
+		}
+	}
+}
+int main()
+{
+	int i = 0;
+	int a[] = { 2,87,4,5,2,67 };
+	int n = sizeof(a) / sizeof(a[0]);
+	bubble(a, n);
+	for (i = 0; i < n; i++)
+	{
+		printf("%d ", a[i]);
+	}
+	return 0;
+}
+#include<stdio.h>
+int Add(int a[],int n)
+{
+	int i = 0;
+	int count = 0;
+	for (i = 0; i < n; i++)
+	{
+		if (a[i] % 2 != 0)
+			count++;
+	}
+	return count;
+}
+int main()
+{
+	int a[] = { 3,56,67,2,4,56,7,78 };
+	int n = sizeof(a) / sizeof(a[0]);
+	printf("%d\n",Add(a,n));
+	return 0;
+}
+#include<stdio.h>
+int fun(int num)
+{
+	int a = 0, p = 1,s=0, sum = 0;
+	while (1)
+	{
+		a = num % 2;
+		s = p * a;
+		sum += s;
+		p *= 10;
+		num /= 2;
+		if (num < 2)
+		{
+			sum += p * num;
+			break;
+		}
+	}
+	return sum;
+}
+int main()
+{
+	int num = 0;
+	scanf("%d", &num);
+	printf("%d\n", fun(num));
+	return 0;
+
+}
+ //#include<stdio.h>
+int fun(int num)
+{
+	int p = 1, sum = 0, a;
+	while(1)
+	{
+		a = num % 2;
+		num /= 2;
+		sum += a * p;
+		p *= 10;
+		if (num < 2)
+		{
+			sum += num * p;
+			break;
+		}
+	}
+	return sum;
+
+}
+int main()
+{
+	int num;
+	scanf("%d", &num);
+	printf("%d\n", fun(num));
+	return 0;
+}
+#include<stdio.h>
+int fun(int num)
+{
+	int a = 0, b = 0, c = 0;
+	int d = 1;
+	while (1)
+	{
+		a = num % 16;
+		b = d * a;
+		c += b;
+		num /= 16;
+		d *= 10;
+		if (num < 16)
+		{
+			c += num * d;
+			break;
+		}
+		
+	}
+	return c;
+}
+int main()
+{
+	int num;
+	scanf("%d", &num);
+	printf("%d\n", fun(num));
+	return 0;
+}
+#include<stdio.h>
+#include<math.h>
+void Add(int* a, int k)
+{
+	int i = 0;
+	int j = 0;
+	int t = 0;
+	for (i = 0; i < k-1; i++)
+	{
+		for (j = 0; j < k-1; j++)
+		{
+			if (fabs((double)a[j]) > fabs((double)a[j + 1]))
+			{
+				t = a[j];
+					a[j] = a[j + 1];
+					a[j + 1] = t;
+			}
+		}
+			
+	}
+	
+}
+int main()
+{
+	int a[256] = { 0 };
+	int k = 0;
+	int i = 0;
+	while (1)
+	{
+		scanf("%d", &a[k]);
+		k++;
+		if (getchar() == '\n')
+			break;
+	}
+	Add(a, k+1);
+	for (i = 1; i <= k; i++)
+	{
+		printf("%d ", a[i]);
+	}
+	return 0;
+}
+#include<stdio.h>
+void change(int* a, int* b)
+{
+	int t = 0;
+	t = *a;
+	*a = *b;
+	*b = t;
+	
+}
+int main()
+{
+	int a = 0;
+	int b = 0;
+	scanf("%d%d", &a, &b);
+	change(&a, &b);
+	printf("%d %d",a, b);
+	return 0;
+}
+#include<stdio.h>
+void find(int* a, int k)
+{
+	int i = 0;
+	int j = 0;
+	int t = 0;
+	for (i = 0; i < k; i+=2)
+	{
+		for (j = 0; j < k ; j += 2)
+		{
+			if (a[j] > a[j + 2])
+			{
+				t = a[j];
+				a[j] = a[j + 2];
+				a[j + 2] = t;
+			}
+		}
+	}
+}
+
+int main()
+{
+	int a[256] = { 0 };
+	int k = 0;
+	int i = 0;
+	while (1)
+	{
+		scanf("%d", &a[k]);
+		k++;
+		if (getchar() == '\n')
+			break;
+	}
+	find(a, k + 1);
+	
+		for (i = 1; i <= k / 2; i += 2)
+			printf("%d ", a[i]);
+	
+
+}
+#include<stdio.h>
+int fun(int a, int b)
+{
+	
+	if (a % b == 0)
+	{
+		return b;
+	}
+	else
+	{
+		 fun(b, a % b);
+	}
+}
+int main()
+{
+	int a = 0;
+	int b = 0;
+	scanf("%d%d", &a, &b);
+	printf("%d\n", fun(a, b));
+	return 0;
+}
+#include<stdio.h>
+void fun(int a[], int n)
+{
+	int i, j,t, tmp;
+	for (i = 1; i < n - 1; i ++)
+	{
+	
+		for (j = i + 1 ; j<= n - 1; j ++)
+		{
+			if (a[i] > a[j])
+			{
+				
+				tmp = a[i];
+				a[i] = a[j];
+				a[j] = tmp;
+			}
+		}
+	}
+}
+	
+int main()
+{
+	int a[] = { 2,56,23,78,12,6 };
+	fun(a, 6);
+	int i = 0;
+	for (i = 0; i < 6; i++)
+		printf("%d ", a[i]);
+	return 0;
+}
+#include<stdio.h>
+#include<string.h>
+void fun(char a[])
+{
+	char* p = a, * q = a, c;
+	int i;
+	while (*p != '\0')
+		p++;
+	p--;
+	while (p > q)
+	{
+		c = *p;
+		*p = *q;
+		*q = c;
+		p--;
+		q++;
+	}
+}
+int main()
+{
+	char a[100];
+	scanf("%s", a);
+	fun(a);
+	printf("%s", a);
+	return 0;
+}
+#include<stdio.h>
+#include<string.h>
+void fun(char a[], char b[])
+{
+	int n, k;
+	n = strlen(a);
+	k = strlen(b);
+	int i = 0;
+	for (i = 0; i < k; i++)
+	{
+		a[n + i] = b[i];
+	}
+}
+int main()
+{
+	char a[100];
+	char b[50];
+	
+	gets_s(a);
+	gets_s(b);
+	
+	fun(a, b);
+	puts(a);
+	return 0;
+}
+#include<stdio.h>
+#include<string.h>
+void fun(char a[], char b[])
+{
+	int n;
+	int k;
+	n = strlen(b);
+	k = strlen(a);
+	int i = 0;
+	for (i = 0; i < n; i++)
+	{
+		a[k + i] = b[n - 1 - i];
+	}
+}
+int main()
+{
+	char a[10];
+	char b[10];
+
+	gets_s(a);
+	gets_s(b);
+
+	fun(a, b);
+	puts(a);
+	return 0;
+}
+#include<stdio.h>
+int find(int a[], int n)
+{
+	int i = 0;
+	for (i = 0; i < n; i++)
+	{
+		if (a[i] == n)
+		{
+			return 1;
+		}
+
+	}
+	return 0;
+}
+int main()
+{
+	int a[5];
+	int i = 0;
+	int n = 0;
+	for (i = 0; i < 5; i++)
+		scanf("%d", &a[i]);
+	printf("输入n\n");
+	scanf("%d", &n);
+	printf("%d\n", find(a, n));
+	return 0;
+}
+#include<stdio.h>
+
+int letter = 0, number = 0, space = 0, other = 0;
+void fun(char a[])
+{
+	int i;
+	
+	for (i = 0; a[i] != '\0'; i++)
+	{
+		if ((a[i] >= 'a' && a[i] <= 'z') || (a[i] >= 'A' && a[i] <= 'Z'))
+		{
+			letter++;
+		}
+		else if (a[i] <= '9' && a[i] >= '0')
+		{
+			number++;
+		}
+		else if (a[i] == ' ')
+		{
+			space++;
+		}
+		else
+		{
+			other++;
+		}
+
+	}
+}
+int main()
+{
+	
+	char a[100];
+	gets_s(a);
+	fun(a);
+	printf("letter=%d\n", letter);
+	printf("number=%d\n", number);
+	printf("space=%d\n", space);
+	printf("other=%d\n", other);
+	return 0;
+}
+#include<stdio.h>
+double Add(int n)
+{
+	int i = 0;
+	double s = 1;
+	
+		for (i = 1; i<=n; i++)
+		{
+			s += 1.0 / (i * (i + 1));
+
+		}
+		
+		return s;
+	
+
+}
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	printf("%lf\n", Add(n));
+	return 0;
+}
