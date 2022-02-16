@@ -1,0 +1,51 @@
+#include<stdio.h>
+int main()
+{
+	int a[5];
+	int i = 0;
+	for (i = 0; i < 5; i++) {
+		scanf("%d", &a[i]);
+	}
+	int j, k;
+	for (i = 0; i < 4; i++) {//外循环次数为n-1
+		for (j = 0; j < 4 - i; j++) {//内循环次数是n-1-i
+			if (a[j] > a[j + 1]) {//利用前后两个比大小冒泡排序
+				k = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = k;
+			}
+		}
+		
+	}
+	for (i = 0; i < 5; i++) {
+		printf("%d ", a[i]);
+	}
+	return 0;
+}
+#include<stdio.h>//次序排位，先将最小的放到第一位
+int main()//第一个数和第二个数比，若前比后大，换位
+{//再第一个和第二个比
+	int a[5];//外循环n-1次，再第二个数和第三个数开始比
+	int i = 0;
+	for (i = 0; i < 5; i++) {
+		scanf("%d", &a[i]);
+	}
+	int  j, k, t;
+	for (i = 0; i < 4; i++) {//注意外循环n-1次
+		j = i;//不可直接用i，用一个和i相等的代表i
+		for (k = i + 1; k < 5; k++) {//保证每次和后面一个数比
+			if (a[j] > a[k]) //里循环总共有n-1次
+				j = k;
+				if (i != j) {
+					t = a[j];
+					a[j] = a[i];
+					a[i] = t;
+				}
+			
+		}
+	}
+	for (i = 0; i < 5; i++) {
+		printf("%d ", a[i]);
+	}
+	return 0;
+}
